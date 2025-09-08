@@ -30,6 +30,11 @@ wss.on('connection', (ws) => {
   });
 });
 
+// Health check endpoint
+app.get('/is-running', (req, res) => {
+  res.send('OK');
+});
+
 app.use(express.static('public'));
 
 const PORT = process.env.PORT || 3000;
