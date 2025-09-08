@@ -35,6 +35,8 @@ app.get('/is-running', (req, res) => {
   res.send('OK');
 });
 
+app.get('/favicon.ico', (req, res) => res.status(204).end());
+
 app.use(express.static('public'));
 
 const PORT = process.env.PORT || 3000;
